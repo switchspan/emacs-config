@@ -1,0 +1,18 @@
+# -*- mode: snippet -*-
+# name : property
+# key: prop
+# group : properties
+# expand-env: ((yas/indent-line 'fixed))
+# contributor: Ken Taylor <taylor.kenneth@NOSPAM.gmail.com>
+# --
+private _${1:varName} as ${2:$$(yas/choose-value '("string" "integer" "boolean" "decimal"))}
+
+public property ${3:PropertyName}() as $2
+  get
+    return _$1
+  end get
+  set(byval value as $2)
+    _$1 = value
+  end set
+end property
+$0

@@ -48,7 +48,7 @@
   :group 'ecb-general
   :type 'boolean)
 
-(defcustom ecb-tip-of-the-day-file "~/.ecb-tip-of-day.el"
+(defcustom ecb-tip-of-the-day-file "~/.emacs.d/.ecb-tip-of-day.el"
   "*File where tip-of-the-day cursor is stored."
   :group 'ecb-general
   :type 'file)

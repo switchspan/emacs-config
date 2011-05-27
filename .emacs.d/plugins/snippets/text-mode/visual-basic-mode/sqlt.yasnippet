@@ -1,0 +1,18 @@
+# -*- mode: snippet -*-
+# name : sql (return dataset)
+# key: sqlt
+# group : bizwiz
+# expand-env: ((yas/indent-line 'fixed))
+# contributor: Ken Taylor <taylor.kenneth@NOSPAM.gmail.com>
+# --
+dim cmdText as string = "$1"
+dim nrResults as integer = 0
+
+dim dsResults as System.Data.DataSet = new DealerQuery(cmdText).Fill(nrResults)
+
+for each row as dataRow in dsResults.tables(0).rows
+  'dim iValue as integer = val(convert.tostring(row("Id")))
+  'dim sValue as string = trim(convert.tostring(row("Name")))
+  'dim bValue as boolean = (ucase(convert.tostring(row("hasSomething"))) = "TRUE")
+  $0
+next

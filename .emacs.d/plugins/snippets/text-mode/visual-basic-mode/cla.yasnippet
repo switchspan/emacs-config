@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# name : class
+# key: cla
+# group : definitions
+# expand-env: ((yas/indent-line 'fixed))
+# contributor: Ken Taylor <taylor.kenneth@NOSPAM.gmail.com>
+# --
+${1:$$(yas/choose-value '("" "public" "private" "friend" "protected"
+ "protected friend"))} class ${2:ClassName}
+  'public sub new()
+  '  //default constructor
+  'end sub
+  $0
+end class

@@ -1,0 +1,38 @@
+# -*- mode: snippet -*-
+# name : New aspx file
+# key: nfile
+# group : bizwiz
+# expand-env: ((yas/indent-line 'fixed))
+# contributor: Ken Taylor <taylor.kenneth@NOSPAM.gmail.com>
+# --
+<%@ Page Language="VB" Debug="True" %>
+<%@ Import Namespace="System.Collections.Generic" %>
+<%@ Import Namespace="System.Data" %>
+<%@ Import Namespace="System.Data.SqlClient" %>
+<%@ Import Namespace="System.Web.Security" %>
+<%@ Import Namespace="System.IO" %>
+<%@ Import Namespace="System.Security.Cryptography" %>
+<%@ Import Namespace="BizWizCore" %>
+<%@ Import Namespace="BizWizCore.Admin" %>
+
+<!--#include file="../includes/lib/inc_constants.aspx"-->
+<!--#include file="../includes/lib/inc_sql.aspx"-->
+<!--#include file="../includes/lib/inc_string.aspx"-->
+<!--#include file="../includes/lib/inc_array.aspx"-->
+<!--#include file="../includes/lib/inc_config.aspx"-->
+<!--#include file="../includes/lib/inc_security.aspx"-->
+<!--#include file="../includes/lib/inc_json.aspx"-->
+<!--#include file="../includes/lib/inc_lookup.aspx"-->
+
+<script runat="server">
+'*******************************************************************************************************************
+'
+' ${1:myScriptName$(upcase yas/text)} SCRIPT
+'
+'*******************************************************************************************************************
+Sub Page_Load
+  'page load tasks go here...
+  $0	
+End Sub
+'*******************************************************************************************************************
+</script>

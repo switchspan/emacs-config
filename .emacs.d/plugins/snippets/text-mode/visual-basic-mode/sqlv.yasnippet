@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name : sql (return value)
+# key: sqlv
+# group : bizwiz
+# expand-env: ((yas/indent-line 'fixed))
+# contributor: Ken Taylor <taylor.kenneth@NOSPAM.gmail.com>
+# --
+dim cmdText as string = "select top 1 $1 from $2 where $3 = '$4'"
+dim iKey as integer = val(new DealerQuery(cmdText).GetValue("$1"))
+$0
+

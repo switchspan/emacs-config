@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: if..then
+# key: if
+# group: conditionals
+# contributor: Ken Taylor <taylor.kenneth@NOSPAM.gmail.com>
+# --
+if ${1:varName} ${2:$$(yas/choose-value '("=" "<" ">" "<=" ">=" "<>"))} ${3:compareValue} then
+  $4
+end if
+$0

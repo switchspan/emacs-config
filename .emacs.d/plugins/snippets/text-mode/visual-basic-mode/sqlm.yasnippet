@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name : sql (insert/update/delete)
+# key: sqlm
+# group : bizwiz
+# expand-env: ((yas/indent-line 'fixed))
+# contributor: Ken Taylor <taylor.kenneth@NOSPAM.gmail.com>
+# --
+dim cmdText as string = "update ${1:tableName} set ${2:colName} = '$3' where ${4:field} = '${5:value}'"
+dim nrRowsChanged as integer = new DealerQuery(cmdText).Run
+$0
