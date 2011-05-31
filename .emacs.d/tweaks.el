@@ -60,6 +60,12 @@
       (defvar running-ms-windows
         (string-match "windows" (prin1-to-string system-type)))
       
+      (defvar running-mac-osx
+	(eq system-type 'darwin))
+
+      (defvar runnin-mac-osx
+	(string-match "darwin" (prin1-to-string system-type)))
+
       (defvar running-gnu-linux
         (string-match "linux" (prin1-to-string system-type)))
       

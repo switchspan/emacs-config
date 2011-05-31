@@ -67,7 +67,8 @@
 	snippets
 	zencoding
 	irc
-	shortcuts))
+	shortcuts
+	organizer))
 
 ;; declare the function to load the settings file list
 (defun load-config (f)
