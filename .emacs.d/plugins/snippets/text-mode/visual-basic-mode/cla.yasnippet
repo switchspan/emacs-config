@@ -5,10 +5,10 @@
 # expand-env: ((yas/indent-line 'fixed))
 # contributor: Ken Taylor <taylor.kenneth@NOSPAM.gmail.com>
 # --
-${1:$$(yas/choose-value '("" "public" "private" "friend" "protected"
- "protected friend"))} class ${2:ClassName}
-  'public sub new()
+${1:$$(yas/choose-value '("" "Public" "Private" "Friend" "Protected"
+ "protected friend"))} cLass ${2:ClassName}
+  'Public Sub New()
   '  //default constructor
-  'end sub
+  'End Sub
   $0
-end class
+End Class

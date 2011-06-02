@@ -5,11 +5,11 @@
 # expand-env: ((yas/indent-line 'fixed))
 # contributor: Ken Taylor <taylor.kenneth@NOSPAM.gmail.com>
 # --
-private _${1:varName} as ${2:$$(yas/choose-value '("string" "integer" "boolean" "decimal"))}
+Private _${1:varName} As ${2:$$(yas/choose-value '("String" "Integer" "Boolean" "Decimal"))}
 
-public writeonly property ${3:PropertyName}() as $2
-  set(byval value as $2)
+Public WriteOnly Property ${3:PropertyName}() As $2
+  Set(ByVal value As $2)
     _$1 = value
-  end set
-end property
+  End Set
+End Property
 $0

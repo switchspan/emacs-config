@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# name: function (integer)
+# key: fni
+# group: definitions
+# expand-env: ((yas/indent-line 'fixed))
+# contributor: Ken Taylor <taylor.kenneth@NOSPAM.gmail.com> 
+# --
+Function ${1:myFunctionName}(ByVal ${2:myParamName} As ${3:$$(yas/choose-value '("String" "Integer" "Boolean" "Decimal"))}) As Integer
+	 Dim ${4:returnVar} As Integer = 0
+	 'TODO: add function body
+	 $0
+
+	 Return $4
+End Function

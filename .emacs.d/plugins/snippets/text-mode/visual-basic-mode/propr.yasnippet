@@ -5,11 +5,11 @@
 # expand-env: ((yas/indent-line 'fixed))
 # contributor: Ken Taylor <taylor.kenneth@NOSPAM.gmail.com>
 # --
-private _${1:varName} as ${2:$$(yas/choose-value '("string" "integer" "boolean" "decimal"))}
+Private _${1:varName} As ${2:$$(yas/choose-value '("String" "Integer" "Boolean" "Decimal"))}
 
-public readonly property ${3:PropertyName}() as $2
-  get
-    return _$1
-  end get
-end property
+Public ReadOnly Property ${3:PropertyName}() As $2
+  Get
+    Return _$1
+  End Get
+End Property
 $0

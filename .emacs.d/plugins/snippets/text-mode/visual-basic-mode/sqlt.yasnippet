@@ -5,14 +5,14 @@
 # expand-env: ((yas/indent-line 'fixed))
 # contributor: Ken Taylor <taylor.kenneth@NOSPAM.gmail.com>
 # --
-dim cmdText as string = "$1"
-dim nrResults as integer = 0
+Dim cmdText As String = "$1"
+Dim nrResults As Integer = 0
 
-dim dsResults as System.Data.DataSet = new DealerQuery(cmdText).Fill(nrResults)
+Dim dsResults As System.Data.DataSet = new DealerQuery(cmdText).Fill(nrResults)
 
-for each row as dataRow in dsResults.tables(0).rows
-  'dim iValue as integer = val(convert.tostring(row("Id")))
-  'dim sValue as string = trim(convert.tostring(row("Name")))
-  'dim bValue as boolean = (ucase(convert.tostring(row("hasSomething"))) = "TRUE")
+For Each row As dataRow In dsResults.tables(0).rows
+  'Dim iValue As Integer = Val(Convert.ToString(row("Id")))
+  'Dim sValue As String = Trim(Convert.ToString(row("Name")))
+  'Dim bValue As Boolean = (Ucase(Convert.ToString(row("hasSomething"))) = "TRUE")
   $0
-next
+Next

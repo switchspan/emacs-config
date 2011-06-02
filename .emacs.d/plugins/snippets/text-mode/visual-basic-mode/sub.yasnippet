@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name: subroutine
+# key: sub
+# group: definitions
+# expand-env: ((yas/indent-line 'fixed))
+# contributor: Ken Taylor <taylor.kenneth@NOSPAM.gmail.com> 
+# --
+Sub ${1:mySubName}(ByVal ${2:myParamName} As ${3:$$(yas/choose-value '("String" "Integer" "Boolean" "Decimal"))})
+    'TODO: add subroutine body
+    $0
+
+End Sub
