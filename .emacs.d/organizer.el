@@ -15,6 +15,9 @@
 (when running-mac-osx
   (setq dropbox-path "~/My Dropbox/"))
 
+(when running-gnu-linux
+  (setq dropbox-path "~/Dropbox/"))
+
 ;; set the agenda files variable
 (setq org-agenda-files (list "~/org/mygtd.org"
 			     "~/org/agendas.org"))
