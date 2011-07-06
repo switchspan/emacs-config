@@ -155,17 +155,18 @@
   )
 
 ;;; set the tab indentation
-(setq c-basic-offset 2)
+;;(setq c-basic-offset 2)
 ;;; set tab to be interpreted as x spaces
 (setq tab-width 4)
 
 ;;; set the default tabs to 4 spaces
 ;;(setq-default indent-tabs-mode nil)
-(setq-default tab-width 8)
+(setq-default indent-tabs-mode 1)
+(setq-default tab-width 4)
 ;;(setq indent-line-function 'insert-tab)
 
 ;;; set the standard indent to 2 rather than 4 spaces
-;;(setq standard-indent 2)
+(setq standard-indent 4)
 
 ;;; cut on auto-indent with cut and paste
 ;;(setq auto-indent-on-visit-file t) ;; If you want auto-indent on for files
@@ -203,6 +204,8 @@
 
 ;; load speedbar for another quick browsing option
 (require 'sr-speedbar)
+(custom-set-variables
+ '(speedbar-show-unknown-files t))
 
 ;; cut off the splash screen for emacs
 (setq inhibit-splash-screen t)

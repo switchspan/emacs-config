@@ -38,3 +38,17 @@
   (message "%d line%s copied" numlines (if (= 1 numlines) "" "s")))
 
 ;;(global-set-key (kbd "s-y") 'line-copy)
+
+;; set the keys for fold-dwim.el (code folding)
+;;(global-set-key (kbd "<f7>") 'fold-dwim-toggle)
+;;(global-set-key (kbd "<M-f7>") 'fold-dwim-hide-all)
+;;(global-set-key (kbd "<S-M-f7>") 'fold-dwim-show-all)
+
+;; define a function for code folding
+(defun jao-toggle-selective-display ()
+  (interactive)
+  (set-selective-display (if selective-display nil 1)))
+
+;; set the key to f2
+(global-set-key [f2] 'jao-toggle-selective-display)
+
