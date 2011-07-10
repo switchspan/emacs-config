@@ -52,3 +52,5 @@
 ;; set the key to f2
 (global-set-key [f2] 'jao-toggle-selective-display)
 
+;; set a key for goto-line
+(global-set-key (kbd "C-x g") 'goto-line)
