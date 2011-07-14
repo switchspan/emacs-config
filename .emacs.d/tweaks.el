@@ -229,3 +229,12 @@
 ;;(add-to-list 'load-path "~/.emacs.d/elpa/textmate-1/textmate.el")
 ;;(require 'textmate)
 ;;(textmate-mode)
+
+;; cut off the ECB tip of the day
+(setq ecb-tip-of-the-day nil)
+
+;; cut on CUA mode for windows cut and past characters (i.e C-c,C-x,C-v)
+(cua-mode t)
+(set cua-auto-tabify-rectangles nil) ;; Don't tabify after rectangle commands
+(transient-mark-mode 1) ;; No region when it is not highlighted
+(setq cua-keep-region-after-copy t) ;; Standard Windows behavior
