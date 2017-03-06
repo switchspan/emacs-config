@@ -5,7 +5,7 @@
 ;;; This is my own personal ~/.emacs
 ;;; Hopefully it will work in most situations
 ;;;
-;;; Copyright (c) 2011 Kenneth Taylor
+;;; Copyright (c) 2017 Kenneth Taylor
 ;;;
 ;;; Author: Kenneth Taylor, <taylor.kenneth@gmail.com> 2011
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -53,7 +53,7 @@
 
 ;; load the individual settings files
 (setq files-to-load
-      '(marmalade
+      '(archives
 	tweaks
 	appearance
 	clojure
