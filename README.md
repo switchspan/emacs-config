@@ -15,8 +15,8 @@ These instructions will get you a copy of the project up and running on your loc
 
 1. Clone this repo
 2. Run the install script  
-  a. Windows: `C:\[clonedirectory]\install.cmd`  
-  b. Linux/Mac: `$ install.sh`  
+  a. For windows -> `C:\[clonedirectory]\install.cmd`  
+  b. For linux/mac -> `$ install.sh`  
 
 ## Built With
 
