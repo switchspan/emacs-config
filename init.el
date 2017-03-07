@@ -32,6 +32,8 @@
 (load "~/.emacs.d/init_window.el")
 (load "~/.emacs.d/init_packages.el")
 (load "~/.emacs.d/init_keybindings.el")
+(load "~/.emacs.d/init_org.el")
+
 
 ;; uptimes
 (setq emacs-load-start-time (current-time))
