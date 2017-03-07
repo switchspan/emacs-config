@@ -5,6 +5,6 @@ Echo Updating files from Github ...
 git pull origin master
 Echo Done!
 Echo Copying config files to %HOMEPATH% ...
-xcopy /y /q .emacs %HOMEPATH%
+REM xcopy /y /q .emacs %HOMEPATH%
 xcopy /y /e /q .emacs.d %HOMEPATH%\.emacs.d
 Echo Done!

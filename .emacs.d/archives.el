@@ -3,14 +3,11 @@
 (require 'package)
 
 ;; create archives adding elpa
-(setq package-archives (cons '("tromey" . "http://tromey.com/elpa/") package-archives))
+;;(setq package-archives (cons '("tromey" . "http://tromey.com/elpa/") package-archives))
 
 ;; Add the marmalade archive
-(add-to-list 'package-archives
-             '("marmalade" . "http://marmalade-repo.org/packages/") t)
-
-;; Add the melpa archive
-(add-to-list 'package-archives
-             '("melpa-stable" . "http://stable.melpa.org/packages/") t)
+(add-to-list 'package-archives '("marmalade" . "https://marmalade-repo.org/packages/"))
+;;(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
+;;(add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t) ; Org-mode's repository
 
 (package-initialize)

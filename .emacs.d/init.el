@@ -1,13 +1,13 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;; File name: ` ~/.emacs '
+;;; File name: ` ~/.emacs.d/init.el '
 ;;; ---------------------
 ;;;
-;;; This is my own personal ~/.emacs
+;;; This is my personal emacs init
 ;;; Hopefully it will work in most situations
 ;;;
 ;;; Copyright (c) 2017 Kenneth Taylor
 ;;;
-;;; Author: Kenneth Taylor, <taylor.kenneth@gmail.com> 2011
+;;; Author: Kenneth Taylor, <taylor.kenneth@gmail.com>
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;
 ;;; This file is NOT part of GNU Emacs.
@@ -52,32 +52,32 @@
 (add-to-list 'load-path "~/.emacs.d/site-lisp/")
 
 ;; load the individual settings files
-(setq files-to-load
-      '(archives
-	tweaks
-	appearance
-	clojure
-	ruby
-	rails
-	ecb
-	js2
-	markdown
-	nav
-	nxhtml
-	snippets
-	zencoding
-	irc
-	shortcuts
-	organizer))
+; (setq files-to-load
+;       '(archives
+; 	tweaks
+; 	appearance
+; 	clojure
+; 	ruby
+; 	rails
+; 	ecb
+; 	js2
+; 	markdown
+; 	nav
+; 	nxhtml
+; 	snippets
+; 	zencoding
+; 	irc
+; 	shortcuts
+; 	organizer))
 
 ;; declare the function to load the settings file list
-(defun load-config (f)
-  (load (concat "~/.emacs.d/"
-		(symbol-name f)
-		".el")))
+; (defun load-config (f)
+;   (load (concat "~/.emacs.d/"
+; 		(symbol-name f)
+; 		".el")))
 
 ;; load up the config files
-(mapcar 'load-config files-to-load)
+;;(mapcar 'load-config files-to-load)
 
 
 (message "Emacs start time: %d seconds."
