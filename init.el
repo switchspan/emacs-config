@@ -1,5 +1,5 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;; File name: ` ~/.emacs'
+;;; File name: ` ~/.emacs.d/init.el'
 ;;; ---------------------
 ;;;
 ;;; This is my personal emacs init
@@ -15,29 +15,23 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Code:
 
-;; Set the emacs window to the upper left
-;;(set-frame-position (selected-frame) 5 5)
-
-
-;; set default font in initial window and for any new window
-(cond
- ((string-equal system-type "windows-nt") ; Microsoft Windows
-  (when (member "Consolas" (font-family-list))
-    (add-to-list 'initial-frame-alist '(font . "Consolas-14"))
-    (add-to-list 'default-frame-alist '(font . "Consolas-14"))))
- ((string-equal system-type "darwin") ; Mac OS X
-  (when (member "DejaVu Sans Mono" (font-family-list))
-    (add-to-list 'initial-frame-alist '(font . "DejaVu Sans Mono-10"))
-    (add-to-list 'default-frame-alist '(font . "DejaVu Sans Mono-10"))))
- ((string-equal system-type "gnu/linux") ; linux
-  (when (member "DejaVu Sans Mono" (font-family-list))
-    (add-to-list 'initial-frame-alist '(font . "DejaVu Sans Mono-10"))
-    (add-to-list 'default-frame-alist '(font . "DejaVu Sans Mono-10")))))
-
-
-;;* Prerequisites
+;; Added by Package.el.  This must come before configurations of
+;; installed packages.  Don't delete this line.  If you don't want it,
+;; just comment it out by adding a semicolon to the start of the line.
+;; You may delete these explanatory comments.
+(package-initialize)
 
 (message "* --[Loading my Emacs init file ]--")
+
+(setq default-directory "~/.emacs.d/")
+(message "Default Dir: %S" default-directory)
+(message "Current OS: %S" system-type)
+
+;;* Prerequisites
+(load "~/.emacs.d/init_font.el")
+;;(load "~/.emacs.d/init_window.el")
+(load "~/.emacs.d/init_packages.el")
+(load "~/.emacs.d/init_keybindings.el")
 
 ;; uptimes
 (setq emacs-load-start-time (current-time))
@@ -65,15 +59,6 @@
 
 ;; ** Environment
 
-(load "package")
-(package-initialize)
-(add-to-list 'package-archives
-             '("marmalade" . "http://marmalade-repo.org/packages/"))
-(add-to-list 'package-archives
-             '("melpa" . "http://melpa.milkbox.net/packages/") t)
-
-(setq package-archive-enable-alist '(("melpa" deft magit)))
-
 (message "Emacs start time: %d seconds."
          (time-to-seconds (time-since emacs-load-start-time)))
 (sit-for 1.5)
@@ -82,5 +67,20 @@
 (setq user-full-name "Ken Taylor")
 (setq user-mail-address "taylor.kenneth@gmail.com")
 
+;; set the default browser to open links
+(setq browse-url-browser-function 'browse-url-chromium) ; google's browser
+
 (message "-= End of the Emacs init =-")
 
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages (quote (magit))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
