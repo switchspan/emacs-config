@@ -13,10 +13,8 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Installing
 
-1. Clone this repo
-2. Run the install script  
-  a. For windows -> `C:\[clonedirectory]\install.cmd`  
-  b. For linux/mac -> `$ install.sh`  
+1. If windows, make sure the `HOME` environment variable is set to the user's home directory (i.e. `C:\Users\[USERNAME]`) 
+2. Clone this repo as `.emacs.d` in the user's home directory
 
 ## Built With
 
