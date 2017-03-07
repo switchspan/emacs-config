@@ -71,7 +71,7 @@
 (diary)
 
 ;; set the default browser to open links
-(setq browse-url-browser-function 'browse-url-chromium) ; google's browser
+;(setq browse-url-browser-function 'eww-browse-url) ; emacs browser
 
 ;; set all prompts to y or n
 (fset 'yes-or-no-p 'y-or-n-p)
