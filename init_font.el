@@ -6,9 +6,9 @@
     (add-to-list 'initial-frame-alist '(font . "Consolas-14"))
     (add-to-list 'default-frame-alist '(font . "Consolas-14"))))
  ((string-equal system-type "darwin") ; Mac OS X
-  (when (member "DejaVu Sans Mono" (font-family-list))
-    (add-to-list 'initial-frame-alist '(font . "DejaVu Sans Mono-10"))
-    (add-to-list 'default-frame-alist '(font . "DejaVu Sans Mono-10"))))
+  (when (member "Menlo" (font-family-list))
+    (add-to-list 'initial-frame-alist '(font . "Menlo-14"))
+    (add-to-list 'default-frame-alist '(font . "Menlo-14"))))
  ((string-equal system-type "gnu/linux") ; linux
   (when (member "DejaVu Sans Mono" (font-family-list))
     (add-to-list 'initial-frame-alist '(font . "DejaVu Sans Mono-10"))
