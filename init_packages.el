@@ -1,28 +1,31 @@
 ;; load the package archives
 ;;(load "package")
-(require 'package)
 
-;; requires emacs > 24
 (message "Loading package archives")
-
-; list the packages you want
-(setq package-list '(dash magit kooten-theme))
-
-; list the repositories containing them
-(setq package-archives '(("melpa" . "https://melpa.org/packages/")
-                         ("gnu" . "http://elpa.gnu.org/packages/")
-                         ("marmalade" . "http://marmalade-repo.org/packages/")))
-
-(setq package-archive-enable-alist '(("melpa" deft magit)))
-
-; activate all the packages (in particular autoloads)
+(require 'package)
+(setq package-enable-at-startup nil)
+(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
+(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
+(add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/"))
 (package-initialize)
 
-; fetch the list of packages available 
-(unless package-archive-contents
-  (package-refresh-contents))
+(unless (package-installed-p 'use-package)
+  (package-refresh-contents)
+  (package-install 'use-package))
 
-; install the missing packages
-(dolist (package package-list)
-  (unless (package-installed-p package)
-    (package-install package)))
+(eval-when-compile
+  (require 'use-package))
+(require 'diminish)
+(require 'bind-key)
+
+;; packages to load
+(use-package dash
+  :ensure t)
+
+(use-package magit
+  :ensure t)
+
+;;(use-package git-gutter
+;;  :ensure t)
+
+(use-package kooten-theme)
