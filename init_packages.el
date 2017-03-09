@@ -25,8 +25,8 @@
 (use-package magit
   :ensure t)
 
-;;(use-package git-gutter
-;;  :ensure t)
+(use-package git-gutter
+  :ensure t)
 
 (use-package kooten-theme)
 
