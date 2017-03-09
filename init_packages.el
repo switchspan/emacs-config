@@ -29,3 +29,5 @@
 ;;  :ensure t)
 
 (use-package kooten-theme)
+
+(message "Done loading packages!")
