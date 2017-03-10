@@ -79,6 +79,10 @@
 ;; set all prompts to y or n
 (fset 'yes-or-no-p 'y-or-n-p)
 
+;; set the default markdown app location
+;;(custom-set-variables
+;; '(markdown-command "/usr/local/bin/pandoc"))
+
 (message "-= End of the Emacs init =-")
 
 (custom-set-variables
