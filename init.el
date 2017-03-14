@@ -34,7 +34,7 @@
 (load "~/.emacs.d/init_packages.el")
 (load "~/.emacs.d/init_keybindings.el")
 (load "~/.emacs.d/init_org.el")
-
+(load "~/.emacs.d/init_gnus.el")
 
 ;; uptimes
 (setq emacs-load-start-time (current-time))
@@ -93,7 +93,8 @@
  '(initial-frame-alist (quote ((fullscreen . maximized))))
  '(package-selected-packages
    (quote
-    (plantuml-mode jekyll-modes lua-mode kooten-theme magit))))
+    (plantuml-mode jekyll-modes lua-mode kooten-theme magit)))
+ '(send-mail-function (quote smtpmail-send-it)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
