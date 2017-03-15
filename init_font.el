@@ -3,8 +3,8 @@
 (cond
  ((string-equal system-type "windows-nt") ; Microsoft Windows
   (when (member "Consolas" (font-family-list))
-    (add-to-list 'initial-frame-alist '(font . "Consolas-14"))
-    (add-to-list 'default-frame-alist '(font . "Consolas-14"))))
+    (add-to-list 'initial-frame-alist '(font . "Consolas-16"))
+    (add-to-list 'default-frame-alist '(font . "Consolas-16"))))
  ((string-equal system-type "darwin") ; Mac OS X
   (when (member "Menlo" (font-family-list))
     (add-to-list 'initial-frame-alist '(font . "Menlo-14"))
