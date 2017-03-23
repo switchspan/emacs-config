@@ -8,7 +8,7 @@
 ;; define my required packages
 (defvar my-packages '(better-defaults paredit idle-highlight-mode ido-ubiquitous
                                       find-file-in-project magit smex scpaste dash 
-                                      git-gutter kooten-theme))
+                                      git-gutter restclient kooten-theme))
 
 ;; load any missing packages
 (package-initialize)
